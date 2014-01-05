@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D3.js as a Client-Side Framework</title>
+    <link rel=stylesheet href=<%= css %>>
+  </head>
+  <body>
+    <script src=<%= js %>></script>
+  </body>
+</html>
