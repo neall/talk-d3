@@ -19,5 +19,13 @@ module.exports = function(lineman) {
     //   ]
     // }
 
+    coffee: {
+      app: [
+        'app/js/exampledata.coffee',
+        'app/js/slides.coffee',
+        'app/js/**/*.coffee'
+      ]
+    }
+
   };
 };

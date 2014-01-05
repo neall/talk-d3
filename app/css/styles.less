@@ -1,0 +1,29 @@
+// @basecolor:  #d3BFB0;
+@basecolor:  #f5ddbc;
+@darkmuted:  #6e5751;
+@lightmuted: #a47c70;
+@boldalpha:  #262445;
+@boldbeta:   #253b30;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: @basecolor;
+  font-family: "Gill Sans", "Helvetica Neue", Helvetica, sans-serif;
+  color: @darkmuted;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+  fill: @darkmuted;
+  .toplevel {
+    fill: @boldalpha;
+  }
+  .secondlevel {
+    fill: @boldbeta;
+  }
+  .code {
+    font-family: Monaco, courier, fixed;
+  }
+}
