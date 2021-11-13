@@ -3,8 +3,12 @@
   "title": "D3.js as a Client-Side Framework",
   "version": "0.0.1",
   "private": true,
-  "author": { "name": "Neal Lindsay" },
-  "devDependencies": { "lineman": "~0.21.3" },
+  "author": {
+    "name": "Neal Lindsay"
+  },
+  "devDependencies": {
+    "lineman": "~0.21.3"
+  },
   "scripts": {
     "start": "lineman run",
     "test": "lineman spec-ci"
