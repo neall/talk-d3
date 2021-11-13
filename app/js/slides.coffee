@@ -1,23 +1,37 @@
-alicebob_data = 'people = [[1, "Alice"], [2, "Bob"]];'
-alicebob_container = 'container = d3.select("#container");'
-alicebob_selectall = 'links = container.selectAll("a").data(people);'
+alicebob_data =
+  """
+  const people = [
+    [1, "Alice"],
+    [2, "Bob"]
+  ]
+  """
+alicebob_container =
+  """
+  const container =
+    d3.select("#container")
+  """
+alicebob_selectall =
+  """
+  const links =
+    container.selectAll("a").data(people)
+  """
 alicebob_enter =
   """
   links.enter().append("a")
-    .attr("href", function(d){ return "/users/" + d[0] })
-    .text(function(d){ return d[1] });
+    .attr("href", d => `/users/${d[0]}`)
+    .text(d => d[1])
   """
 alicebob_enter_no_text =
   """
   links.enter().append("a")
-    .attr("href", function(d){ return "/users/" + d[0] });
+    .attr("href", d => `/users/${d[0]}`)
   """
-alicebob_exit = 'links.exit().remove();'
-alicebob_update = 'links.text(function(d){ return d[1] });'
+alicebob_exit = 'links.exit().remove()'
+alicebob_update = 'links.text(d => d[1])'
 alicebob_selectall_w_id =
   """
   links = container.selectAll("a")
-    .data(people, function(d){ return d[0] });
+    .data(people, d => d[0])
   """
 
 alicebobd3 = [
@@ -58,9 +72,9 @@ codes =
   alicebob_exit: alicebob_exit
   alicebob_update: alicebob_update
   alicebob_selectall_w_id: alicebob_selectall_w_id
-  d3callback: 
+  d3callback:
     """
-    function(d, i) {
+    (d, i) => {
       // first argument is your datum
       // second argument is your index
       // `this` is the DOM element
